@@ -14,7 +14,9 @@ const Timer = ({ timeLeft, setTimeLeft, onTimeEnd }) => {
 
   return (
     <div className="text-right text-sm text-gray-600 mb-4">
-      Time left: <span className="font-bold text-red-600">{timeLeft}s</span>
+      <span className="text-2xl font-bold text-gray-600">
+        {Math.floor(timeLeft / 60)}:{String(timeLeft % 60).padStart(2, '0')}
+      </span>
     </div>
   );
 };
